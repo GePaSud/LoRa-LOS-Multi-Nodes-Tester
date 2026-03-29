@@ -1,4 +1,4 @@
-🇫🇷 [Version française](README.fr.md) | 🇬🇧 [English version](README.en.md)
+🇫🇷 [Version française](README_fr.md) | 🇬🇧 [English version](README.md)
 # LoRa Multi-Node Line-of-Sight Tester
 
 **Hāmani Fenua · TERRA FORMA**  
