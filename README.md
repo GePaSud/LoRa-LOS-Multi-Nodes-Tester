@@ -163,7 +163,7 @@ Use a **data-capable USB cable**, not a charge-only cable.
 
 ### 4. Uploading logos / favicon / static files
 
-If you want to display properly the logos and icon, upload the `data/` folder using **LittleFS Filesystem Uploader**.
+If you want to display properly the logos and icon, upload the `data/` folder using **LittleFS Filesystem Uploader** (https://github.com/earlephilhower/arduino-littlefs-upload).
 
 Aduino Project structure:
 
