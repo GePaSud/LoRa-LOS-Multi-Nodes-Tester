@@ -163,9 +163,9 @@ Use a **data-capable USB cable**, not a charge-only cable.
 
 ### 4. Uploading logos / favicon / static files
 
-If your project uses logos or a favicon, place them in the `data/` folder and upload them to the ESP32 filesystem using **LittleFS Filesystem Uploader**.
+If you want to display properly the logos and icon, upload the `data/` folder using **LittleFS Filesystem Uploader**.
 
-Example structure:
+Aduino Project structure:
 
 ```text
 project/
@@ -174,8 +174,8 @@ project/
     logo_haamani.png
     logo_labo.png
     logo_univ.png
-    logo_terraforma.png```
-
+    logo_terraforma.png
+```
 ## Prebuilt firmware
 
 A prebuilt firmware package for **Heltec WiFi LoRa 32 V2** is also available in the project releases as a `.zip` archive.
@@ -199,3 +199,4 @@ python -m esptool --chip esp32 --port COMX --baud 460800 write_flash -z ^
   0x1000 sketch_mar26a_LoRa_Tester_V1.ino.bootloader.bin ^
   0x8000 sketch_mar26a_LoRa_Tester_V1.ino.partitions.bin ^
   0x10000 sketch_mar26a_LoRa_Tester_V1.ino.bin
+```
