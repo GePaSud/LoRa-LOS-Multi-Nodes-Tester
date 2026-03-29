@@ -200,3 +200,48 @@ python -m esptool --chip esp32 --port COMX --baud 460800 write_flash -z ^
   0x8000 sketch_mar26a_LoRa_Tester_V1.ino.partitions.bin ^
   0x10000 sketch_mar26a_LoRa_Tester_V1.ino.bin
 ```
+
+## Related projects and ecosystem
+
+This project builds on an existing ESP32 / LoRa ecosystem, but combines several features in a way that is specifically oriented toward **multi-node field line-of-sight testing**.
+
+Useful related components and projects include:
+
+- **LoRa by Sandeep Mistry**  
+  A widely used Arduino LoRa library for SX127x radios. It provides the low-level radio functions used by many ESP32 + LoRa projects.  
+  https://github.com/sandeepmistry/arduino-lora
+  [LoRa by Sandeep Mistry](https://github.com/sandeepmistry/arduino-lora)
+
+- **RadioLib**  
+  A broader radio communication library supporting many LoRa transceivers and boards. It is often used for more advanced or more portable LoRa projects.  
+  https://github.com/jgromes/RadioLib
+  [RadioLib](https://github.com/jgromes/RadioLib)
+  
+- **Heltec ESP32 LoRa support / board-specific projects**  
+  Heltec boards are commonly used with ESP32-based LoRa applications, including OLED display support and board-specific pin mappings.  
+  https://heltec.org
+  [Heltec](https://heltec.org)
+  https://github.com/ropg/heltec_esp32_lora_v3
+  [heltec_esp32_lora_v3](https://github.com/ropg/heltec_esp32_lora_v3)
+
+- **LoRaMessenger**  
+  An ESP32 + LoRa project combining LoRa communication with a local Wi-Fi interface, showing that hybrid “LoRa + local web UI” approaches already exist.  
+  https://github.com/TheNico14/LoRaMessenger
+  [LoRaMessenger](https://github.com/TheNico14/LoRaMessenger)
+
+- **LowCostLoRaGw / range test examples**  
+  A collection of LoRa examples and gateway-related tools, including test and display-oriented sketches useful for inspiration when building field diagnostics.  
+  https://github.com/CongducPham/LowCostLoRaGw
+  [LowCostLoRaGw](https://github.com/CongducPham/LowCostLoRaGw)
+
+### Positioning of this project
+
+Compared with general LoRa libraries or messaging-oriented examples, this firmware is focused on:
+
+- **field deployment preparation**
+- **multi-node LoRa visibility testing**
+- **radio-quality observation through a local web dashboard**
+- **session-based CSV logging**
+- **simple use by non-developer users in the field**
+
+In that sense, it is best understood as a **research-oriented field test tool** built from existing open-source LoRa software bricks, rather than a generic LoRa communication framework.
