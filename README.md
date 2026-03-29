@@ -174,7 +174,7 @@ project/
     logo_haamani.png
     logo_labo.png
     logo_univ.png
-    logo_terraforma.png
+    logo_terraforma.png```
 
 ## Prebuilt firmware
 
