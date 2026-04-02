@@ -12,7 +12,7 @@ Firmware for **ESP32 / Heltec WiFi LoRa 32 V2** and compatible LoRa boards
 
 ## Overview
 
-This project turns an **ESP32 + LoRa** board into a field-ready **multi-node radio visibility tester**.
+This project turns an **ESP32 + LoRa SX1276** board into a field-ready **multi-node radio visibility tester**.
 
 Each node:
 
