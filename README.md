@@ -75,12 +75,12 @@ The interface provides:
 
 All nodes in a given session must share the **exact same radio profile**:
 
-- frequency
-- spreading factor
-- bandwidth
-- coding rate
-- TX power
-- preamble length
+- frequency (must match the board variant and regional band in use; for Heltec WiFi LoRa 32 V2, typical regional ranges include EU868: 863–870 MHz, US915: 902–928 MHz, and CN470: 470–510 MHz)
+- spreading factor (SF6 to SF12; note that SF6 requires implicit header mode)
+- bandwidth (supported values in this firmware/library are 7.8, 10.4, 15.6, 20.8, 31.25, 41.7, 62.5, 125, 250, and 500 kHz; 125 kHz is the standard and recommended value in this project)
+- coding rate (CR 5 to 8, corresponding to 4/5 to 4/8)
+- TX power (2 to 20 dBm configurable in this firmware for PA_BOOST-based modules; on a Heltec WiFi LoRa 32 V2, practical maximum output power is about 19 ± 1 dBm depending on band)
+- preamble length (supported range: 6 to 65535 symbols; default is usually 8, and this project enforces a minimum value in the code)
 - sync word
 - CRC setting
 
@@ -108,7 +108,7 @@ With lower spreading factors such as **SF7** or **SF9**, shorter intervals can b
 - **Heltec WiFi LoRa 32 V2**
 
 ### Supported with pin adaptation
-- Other **ESP32 + LoRa** boards
+- Other **ESP32 + LoRa** SX1276 boards
 - Boards **with or without display**
 
 To port the firmware to another board, adapt:
