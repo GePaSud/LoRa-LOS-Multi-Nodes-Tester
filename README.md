@@ -41,6 +41,8 @@ The system is intended for **line-of-sight testing**, **deployment preparation**
 - Optional OLED display support
 - Compatible with Heltec WiFi LoRa 32 V2 and other ESP32 + LoRa boards
 
+The project should work with an SX1278/SX1277/SX1279-based board, as the LoRa library supports the SX1276/SX1277/SX1278/SX1279 family. However, the selected frequency must match the actual RF version of the board, and the pin mapping may need to be adapted.
+
 ## Typical use case
 
 This firmware is useful when several portable LoRa nodes are placed in the field in order to answer questions such as:
